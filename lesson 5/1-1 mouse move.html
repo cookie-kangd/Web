@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-1 鼠标移动练习</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.d1{
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			position: absolute;
+		}
+		.d2{
+			width: 15px;
+			height: 15px;
+			background-color: green;
+			position: absolute;
+		}
+		.d3{
+			width: 10px;
+			height: 10px;
+			background-color: blue;
+			position: absolute;
+		}
+		.d4{
+			width: 5px;
+			height: 5px;
+			background-color: purple;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript">
+		//获取鼠标的X Y坐标
+		function getMouse(ev){
+			var Top=document.documentElement.scrollTop||document.body.scrollTop;
+			var Left=document.documentElement.scrollLeft||document.body.scrollLeft;
+			return {x: ev.clientX+Left,y: ev.clientY+Top};
+		};
+		//鼠标滑动div跟着滑动
+		document.onmousemove=function(){
+			var aDiv=document.getElementsByTagName('div');
+			var pos=getMouse(event);
+			for (var i = aDiv.length - 1; i > 0; i--) {
+				aDiv[i].style.left=aDiv[i-1].offsetLeft+'px';
+				aDiv[i].style.top=aDiv[i-1].offsetTop+'px';
+			}
+			aDiv[0].style.left=pos.x+'px';
+			aDiv[0].style.top=pos.y+'px';
+		};
+	</script>
+</head>
+<body>
+	<div class="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+</body>
+</html>

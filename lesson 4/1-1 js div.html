@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-1 Js控制Div</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		button{
+			width: 50px;
+			height: 30px;
+			font-size: 16px;
+			margin-left: 10px;
+		}
+		button:nth-child(1){
+			margin-left: 30%;
+		}
+		.content{
+			width: 80px;
+			height: 80px;
+			background-color: black;
+			margin: 50px 38%;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var anniu=document.querySelectorAll('button'),
+				fangkuai=document.querySelector('div');
+			anniu[0].onclick=function(){
+				fangkuai.style.width="150px";
+			};
+			anniu[1].onclick=function(){
+				fangkuai.style.height="200px";
+			};
+			anniu[2].onclick=function(){
+				fangkuai.style.backgroundColor="red";
+			};
+			anniu[3].onclick=function(){
+				fangkuai.style.display="none";
+			};
+			anniu[4].onclick=function(){
+				fangkuai.style.width="80px";
+				fangkuai.style.height="80px";
+				fangkuai.style.backgroundColor="black";
+				fangkuai.style.display="block";
+			};
+		};
+	</script>
+</head>
+<body>
+	<button>变宽</button>
+	<button>变高</button>
+	<button>变色</button>
+	<button>隐藏</button>
+	<button>重置</button>
+	<div class="content"></div>
+</body>
+</html>

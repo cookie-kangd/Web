@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="../jquery.js"></script>
+	<meta charset="utf-8">
+  <title>JQuery选项卡练习</title>
+  <style type="text/css">
+  	* {
+  	    margin: 0;
+  		padding: 0;
+  	 }
+  	div{
+  		width: 521px;
+  		height: 360px;
+  		margin: 100px auto;
+  		border: 1px solid black;
+  		box-sizing: border-box;
+  	}
+	.header{
+		width: 520px;
+		height: 80px;
+	}
+	.header>li{
+		list-style: none;
+		width: 130px;
+		height: 80px;
+		text-align: center;
+		line-height: 80px;
+		background-color: orange;
+		float: left;
+	}
+	.header .moren{
+		background-color: #ccc;
+	}
+	.content>li{
+		list-style: none;
+		display: none;
+	}
+	.content .moren2{
+		display: block;
+	}
+    </style>
+</head>
+<body>
+	<div>
+		<ul class="header">
+			<li class="moren">生活</li>
+			<li>美食</li>
+			<li>家居</li>
+			<li>运动</li>
+		</ul>
+		<ul class="content">
+			<li class="moren2"><img src="1.jpg"></li>
+			<li><img src="2.jpg"></li>
+			<li><img src="3.jpg"></li>
+			<li><img src="4.jpg"></li>
+		</ul>
+    </div>
+    <script type="text/javascript">
+		$('.header>li').mouseenter(function(){
+			$(this).addClass('moren');
+			$(this).siblings().removeClass('moren');
+			var xuhao=$(this).index();
+			var img=$('.content>li').eq(xuhao);
+			img.addClass('moren2');
+			img.siblings().removeClass('moren2');
+		});
+   	</script>
+</body>
+</html>

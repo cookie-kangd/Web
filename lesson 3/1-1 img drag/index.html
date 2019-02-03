@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+    <title>HTML5图片拖拽</title>
+    <style type="text/css">
+  	    * {
+  		   margin: 0;
+  		   padding: 0;
+  	    }
+  	    p{
+  	    	margin-top: 20px;
+  	    	margin-left: 40%;
+  	    }
+		#div1{
+			width: 220px;
+			height: 170px;
+			margin: 100px auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		img{
+			width: 200px;
+			height: 150px;
+		}
+    </style>
+</head>
+<body>
+	<p>请拖动下面的图片到文本框中</p>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<img src="111.jpg" id="drag1" draggable="true" ondragstart="drag(event)">
+    <script type="text/javascript">
+		function allowDrop(ev){
+			ev.preventDefault();
+		};
+		function drag(ev){
+			ev.dataTransfer.setData('Text',ev.target.id);
+		};
+		function drop(ev){
+			ev.preventDefault();
+			var data=ev.dataTransfer.getData('Text');
+			ev.target.appendChild(document.getElementById(data));
+		};
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+			margin:0;
+			padding:0
+		}
+a,p{
+	text-decoration: none;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	color: #656565;
+}
+.img{
+	width: 480px;
+	height: 910px;
+	float: left;
+	background-image: url(../img/beijing.jpg);
+	background-attachment: fixed;
+	background-size:35%;
+	background-repeat: no-repeat;
+}
+.img img{
+	width: 150px;
+	height: 63px;
+}
+.thing{
+	width: 623px;
+	height: 850px;
+	float: right;
+	margin-right: 60px;
+}
+.thing .header{
+	widows: 623px;
+	height: 109px;
+}
+.thing .header .huiyuan{
+	width: 96px;
+	height: 34px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
+}
+.thing .header .huiyuan .tupian3{
+	float: left;
+}
+.thing .header .huiyuan .tupian4{
+	float: right;
+	margin-top: 10px;
+	font-weight: 30;
+	opacity: 0.6;
+}
+.thing .header .huiyuan .tupian4:hover{
+	opacity: 1;
+}
+.thing .header .youxiang{
+	width: 89px;
+	height: 15px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
+	opacity: 0.6;
+}
+.thing .header .youxiang:hover{
+	opacity: 1;
+}
+.thing .header .youxiang .tupian2{
+	float: left;
+	margin-top: 12px;
+}
+.thing .header .youxiang .wenzi2{
+	float: right;
+	margin-top: 9px;
+}
+.thing .header .yuyan{
+	width: 80px;
+	height: 15px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 20px;
+	opacity: 0.6;
+}
+.thing .header .yuyan:hover{
+	opacity: 1;
+}
+.thing .header .yuyan .wenzi1{
+	float: left;
+	margin-top:9px;
+}
+.thing .header .yuyan .tupian1{
+	float: right;
+	margin-top:9px;
+}
+.thing .header .yijian{
+	width: 64px;
+	height: 15px;
+	float: right;
+	margin-top:29px;
+	opacity: 0.6;
+}
+.thing .header .yijian:hover{
+	opacity: 1;
+}
+.thing .content{
+	width: 623px;
+	height: 595px;
+}
+.thing .content .top{
+	width: 623px;
+	height: 166px;
+}
+.thing .content .top .top1{
+	font-size: 44px;
+	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+.thing .content .top .top2{
+	float: left;
+	font-size: 28px;
+	margin-top: 12px;
+}
+.thing .content .top .top3{
+	float: right;
+	font-size: 24px;
+	margin-top: 12px;
+	margin-right: 146px;
+	color: #2b72ff;
+	opacity: 0.6;
+}
+.thing .content .top .top3:hover{
+	opacity: 1;
+}
+.thing .content .bottom{
+	width: 623px;
+	height: 344px;
+}
+.thing .content .bottom .shuru1{
+	width: 480px;
+	height: 52px;
+	font-size: 20px;
+	color: #aaa;
+	text-indent: 1em;
+}
+.thing .content .bottom .shuru2{
+	width: 480px;
+	height: 52px;
+	margin-top: 32px;
+	font-size: 20px;
+	color: #aaa;
+	text-indent: 1em;
+}
+.thing .content .bottom .shuru3{
+	width: 154px;
+	height: 52px;
+	margin-top: 32px;
+	float: left;
+	font-size: 20px;
+	text-indent: 1em;
+}
+.thing .content .bottom .shuru4{
+	width: 307px;
+	height: 48px;
+	margin-top: 32px;
+	margin-left: 19px;
+	float: left;
+	font-size: 20px;
+	color: #aaa;
+	text-indent: 1em;
+}
+.thing .content .bottom .shuru5{
+	font-size: 14px;
+	color: #999;
+	margin-top: 9px;
+	float: left;
+}
+.thing .content .bottom .show{
+	width: 480px;
+	height: 52px;
+	margin-top: 120px;
+	display: none;
+}
+.thing .content .bottom .show .show_in1{
+	width: 154px;
+	height: 52px;
+	font-size: 20px;
+	color: #aaa;
+	text-indent: 1em;
+	margin-top: 15px;
+	float: left;
+}
+.thing .content .bottom .show .show_in2{
+	width: 307px;
+	height: 57px;
+	margin-top: 15px;
+	background-color: #3083ff;
+	color: white;
+	font-size: 20px;
+	float: right;
+}
+.thing .content .bottom .shuru6{
+	width: 478px;
+	height: 59px;
+	margin-top: 41px;
+	background-color: #3083ff;
+	color: white;
+	font-size: 24px;
+}
+.thing .content .bottom2{
+	width: 623px;
+	height: 85px;
+	margin-top: 40px;
+}
+.thing .content .bottom2 .bottom2_1{
+	width: 125px;
+	height: 15px;
+	font-size: 13px;
+	color: #aaa;
+}
+.thing .content .bottom2 .bottom2_2{
+	width: 272px;
+	height: 15px;
+	margin-top: 15px;
+	font-size: 13px;
+	color: #aaa;
+}
+.thing .content .bottom2 .bottom2_2 .wenzi10{
+	float: left;
+	margin-left: 3px;
+}
+.thing .content .bottom2 .bottom2_3{
+	margin-top: 94px;
+	font-size: 14px;
+	color: #bbb;
+	text-align: center;
+}

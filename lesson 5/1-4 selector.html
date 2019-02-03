@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+  	<title>1-4 全选反选不选</title>
+  	<style type="text/css">
+  		*{
+  			margin: 0;
+  			padding: 0;
+  		}
+  		#anniu{
+  			float: left;
+  		}
+  	</style>
+</head>
+<body>
+	<div id="anniu">
+		<input type="button" value="全选">
+		<input type="button" value="不选">
+		<input type="button" value="反选">
+	</div><br>
+	<div id="xuanze"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+		<input type="checkbox"><br>
+	</div>
+	<script type="text/javascript">
+		var anniu=document.getElementById('anniu'),
+			btn=anniu.getElementsByTagName('input'),
+			xuanze=document.getElementById('xuanze'),
+			cbox=xuanze.getElementsByTagName('input');
+
+			btn[0].onclick=function(){
+				for(var i=0;i<cbox.length;i++){
+					cbox[i].checked=true;
+				};
+			};
+			btn[1].onclick=function(){
+				for(var i=0;i<cbox.length;i++){
+					cbox[i].checked=false;
+				};
+			};
+			btn[2].onclick=function(){
+				for(var i=0;i<cbox.length;i++){
+					if(cbox[i].checked==true){
+						cbox[i].checked=false;
+					}
+					else{
+						cbox[i].checked=true;
+					};
+				};
+			};
+  	</script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-2 网页换肤</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #FDD;
+		}
+		.out{
+			width: 100%;
+			height: 100px;
+		}
+		.red,.green,.black{
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			margin-top: 10px;
+			margin-left: 5px;
+		}
+		.red{
+			background-color: white;
+			margin-left: 443px;
+			border: 4px solid red;
+			box-sizing: border-box;
+		}
+		.green{
+			background-color: green;
+		}
+		.black{
+			background-color: black;
+		}
+		.in{
+			width: 480px;
+			height: 30px;
+			background-color: red;
+			list-style: none;
+			margin: 0 auto;
+			margin-top: 10px;
+			border: 1px solid #fff;
+		}
+		.in>li{
+			float: left;
+			width: 80px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			border:1px solid white;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		.in>li>a{
+			text-decoration: none;
+			color: white;
+		}
+		.in>li>a:hover{
+			text-decoration: underline;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var anniu=document.querySelectorAll('.out>a'),
+				beijing=document.querySelector('body'),
+				lanmu=document.querySelectorAll('.in')[0];
+			console.log(lanmu);
+			anniu[0].onclick=function(){
+				this.style.backgroundColor='white';
+				this.style.border="4px solid red";
+				this.style.boxSizing="border-box";
+				anniu[1].style.backgroundColor='green';
+				anniu[1].style.border=" ";
+				anniu[1].style.boxSizing=" ";
+				anniu[2].style.backgroundColor='black';
+				anniu[2].style.border=" ";
+				anniu[2].style.boxSizing=" ";
+				beijing.style.backgroundColor="#FDD";
+				lanmu.style.backgroundColor="red";
+			};
+			anniu[1].onclick=function(){
+				this.style.backgroundColor='white';
+				this.style.border="4px solid green";
+				this.style.boxSizing="border-box";
+				anniu[0].style.backgroundColor='red';
+				anniu[0].style.border=" ";
+				anniu[0].style.boxSizing=" ";
+				anniu[2].style.backgroundColor='black';
+				anniu[2].style.border=" ";
+				anniu[2].style.boxSizing=" ";
+				beijing.style.backgroundColor="#A3C5A8";
+				lanmu.style.backgroundColor="green";
+			};
+			anniu[2].onclick=function(){
+				this.style.backgroundColor='white';
+				this.style.border="4px solid black";
+				this.style.boxSizing="border-box";
+				anniu[0].style.backgroundColor='red';
+				anniu[0].style.border=" ";
+				anniu[0].style.boxSizing=" ";
+				anniu[1].style.backgroundColor='green';
+				anniu[1].style.border=" ";
+				anniu[1].style.boxSizing=" ";
+				beijing.style.backgroundColor="#ccc";
+				lanmu.style.backgroundColor="black";
+			};
+		};
+	</script>
+</head>
+<body>
+	<div class="out">
+		<a href="javascript:;" class="red"></a>
+		<a href="javascript:;" class="green"></a>
+		<a href="javascript:;" class="black"></a>
+		<ul class="in">
+			<li><a href="javascript:;">新闻</a></li>
+			<li><a href="javascript:;">娱乐</a></li>
+			<li><a href="javascript:;">体育</a></li>
+			<li><a href="javascript:;">电影</a></li>
+			<li><a href="javascript:;">音乐</a></li>
+			<li><a href="javascript:;">旅游</a></li>
+		</ul>
+	</div>
+</body>
+</html>

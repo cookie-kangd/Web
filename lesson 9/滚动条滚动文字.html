@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4 进度条控制Div</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div1{
+			width: 600px;
+			height: 20px;
+			background-color: #ccc;
+			margin: 20px auto;
+			position: relative;
+		}
+		#div2{
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			position: absolute;
+		}
+		#div3{
+			width: 400px;
+			height: 400px;
+			border: 1px solid black;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+		}
+		#div4{
+			font-size: 15px;
+			padding: 2px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		#wenzi{
+			width: 50px;
+			height: 30px;
+			position: absolute;
+			left: 330px;
+			top: 20px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var oDiv1=document.getElementById('div1'),
+				oDiv2=document.getElementById('div2'),
+				left=0;
+			oDiv2.onmousedown=function(ev){
+				var oEvent=ev||event;
+				left=oEvent.clientX-oDiv2.offsetLeft;
+				
+				document.onmousemove=function(ev){
+					var oEvent=ev||event;
+					var x=oEvent.clientX-left;
+					if (x<0) {
+						x=0;
+					}
+					else if (x>oDiv1.offsetWidth-oDiv2.offsetWidth) {
+						x=oDiv1.offsetWidth-oDiv2.offsetWidth;
+					}
+					oDiv2.style.left=x+'px';
+					
+					var oDiv3=document.getElementById('div3'),
+						oDiv4=document.getElementById('div4'),
+						oDiv5=document.getElementById('wenzi'),
+						juli=x/(oDiv1.offsetWidth-oDiv2.offsetWidth);
+					oDiv5.innerHTML=Math.round(juli*100)+'%';
+					oDiv4.style.top=-juli*(oDiv4.offsetHeight-oDiv3.offsetHeight)+'px';
+				};
+
+				document.onmouseup=function(){
+					document.onmousemove=null;
+					document.onmouseup=null;
+				};
+			};
+		};
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2"></div>
+	</div>
+	<div id="wenzi"></div>
+	<div id="div3">
+		<div id="div4"><h1>黑道学生</h1><br><h2>第三章</h2><br>就在我说完这句话，原本站在门口的那几名保安走了上来，谨慎地看着我，带头那个晃悠着手里的电棍，恶狠狠地说：［先生，你最好别在这闹事，否则。就爱。］他冷笑着。
+
+    我轻轻皱了一下眉头，忽地笑了：［不错，这还有点保安的架势。］
+
+    这帮保安琢磨不透我的来历，也不敢轻易出手，尤其是像我现在这种身材，虽然还没庞大到让路人饶着走的程度，可是一般人也不敢找我的茬。
+
+    ［先生，这里不欢迎你。］保安开始下逐客令了。
+
+    这叫什么事？回自己的公司被人挡在门口进不去也就算了，还被人像撵兔子一样撵，我虽然封闭训练了五个月，可我骨子里的那股血还没有完全冷掉呢。
+
+    我嘿嘿笑着捏了捏拳头，我真的蛮有兴趣试试这几个保安的功夫。
+
+    ［打电话叫人！］带头保安一看不好，立刻大叫一声，站在最外面的两人连忙跑了出去，剩下的六个人将我团团围住。
+
+    ［喝！］我暴喝着，一计踢腿踢中左边保安的下巴，他的身体马上后仰，重重地摔倒在地。
+
+    五人见状非但不害怕，反而呼啸着冲了过来，铁棍直接朝我身体的要害部位打来。
+
+    ［好家伙。］这些人真的很专业，要不是在替天闭关了五个月，我估计还真打不过他们，可是现在的我已经今非夕比了，我晃动着身躯躲开他们的铁棍，冲着他们的脸一人赏了个眼炮。
+
+    一分钟时间都不用，六名保安就被我打翻在地，我笑嘻嘻地整了整衣服，进了电梯。
+
+    大堂除了那六个在地上翻滚的保安，剩下的就是那两名在尖叫着的接待小妞了。
+
+    ［操，直接进电梯好了，哪来的那么多事。］我看着电梯上标示的各个部门，摇着头按了八楼。
+
+    电梯刚一打开门，数名保安就拥了进来，他们手里的武器还是铁棍，不过，这个人数就稍微多了点，而且每个人的个子都比我高。
+
+    妈的，他们怎么不去打篮球呢？
+
+    我很是费解地扣住两名保安的手腕往外推。
+
+    ［妈的，抓住他！］不知谁喊了一句，保安们［呼啦］地围了过来。
+
+    ［砰砰砰砰！］拳拳到肉，是凡打中的人，没有一个还能坚持着站起来，保安们纷纷倒地，那叫一个整齐。
+
+    我是看在自己人的份儿上没下死手，妈的，这可丧强财务公司，这些都是我的小弟啊，只不过他们不认识我罢了。
+
+    留下那些在地上哀叫的保安们，我顺着走廊向最里面的会议室，使劲地推开了大门。
+		</div>	
+	</div>
+</body>
+</html>

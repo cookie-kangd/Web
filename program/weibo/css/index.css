@@ -1,0 +1,173 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: url(../img/skin.jpg) no-repeat;
+	background-size: cover;
+}
+.header{
+	width: 1366px;
+	height: 50px;
+	position: relative;
+}
+.header .sousuo{
+	width: 433px;
+	height: 29px;
+	position: absolute;
+	left: 175px;
+	top: 11px;
+	background-color: #ccc;
+	resize: none;
+	font-size: 16px;
+	text-indent: 1em;
+	text-align: left;
+	line-height: 29px;
+	outline: none;
+}
+.header .sousuo2{
+	width: 44px;
+	height: 30px;
+	position: absolute;
+	left: 609px;
+	top: 11px;
+=}
+.header img{
+	width: 100%;
+}
+.content{
+	width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.content .left{
+	float: left;
+}
+.content .right{
+	float: right;
+}
+.content .zhong1{
+	float: left;
+	position: relative;
+}
+.content .zhong1 .shuru{
+	width: 579px;
+	height: 80px;
+	position: absolute;
+	right: 11px;
+	top: 41px;
+	resize: none;
+	outline: none;
+}
+.content .zhong1 .anniu{
+	width: 82px;
+	height: 30px;
+	position: absolute;
+	left: 509px;
+	top: 126px;
+	background-color: #ccc;
+	border: none;
+	text-align: center;
+	line-height: 30px;
+	font-size: 16px;
+	color: white;
+	border-radius: 5px;
+}
+.content .zhong2{
+	float: left;
+	margin-top: 10px;
+}
+.content .zhong3{
+	float: left;
+	width: 601px;
+	margin-top: 10px;
+	background-color: rgba(0,0,0,0.8);
+}
+.content .zhong3 .zhong31{
+	width: 601px;
+	height: 100px;
+	border:1px solid black;
+	display: block;
+}
+.content .zhong3 p{
+	font-size: 18px;
+	padding: 10px;
+	color: white;
+}
+.content .zhong3 .time{
+	font-size: 14px;
+	color: #ccc;
+	padding: 10px;
+	float: left;
+}
+.content .zhong3 .pinglun{
+	float: right;
+	padding: 10px;
+}
+.content .zhong3 .pinglun a{
+	text-decoration: none;
+	color: black;
+	margin-left: 10px;
+	color: white;
+}
+.content .zhong3 .pinglun a:nth-child(1){
+	background: url(../img/dianzan.jpg) no-repeat;
+	padding-left: 20px;
+}
+.content .zhong3 .pinglun a:nth-child(2){
+	background: url(../img/cai.jpg) no-repeat;
+	padding-left: 20px;
+}
+.content .zhong3 .pinglun a:nth-child(3){
+	background: url(../img/shanchu.jpg) no-repeat;
+	padding-left: 20px;
+}
+.footer{
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.8);
+	margin-top: 675px;
+	position: relative;
+}
+.footer span{
+	font-size: 18px;
+	color: white;
+}
+.footer ul li{
+	width: 70px;
+	height: 30px;
+	list-style: none;
+	float: left;
+	margin-top: 5px;
+}
+.footer ul li a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #ccc;
+}
+.footer .d1{
+	width: 140px;
+	height: 160px;
+	position: absolute;
+	left: 100px;
+	top: 20px;
+}
+.footer .d2{
+	width: 140px;
+	height: 160px;
+	position: absolute;
+	right: 305px;
+	top: 20px;
+}
+.footer .d3{
+	width: 140px;
+	height: 160px;
+	position: absolute;
+	right: 90px;
+	top: 20px;
+}
+.footer .d3 li{
+	float: none;
+}

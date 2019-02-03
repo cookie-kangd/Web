@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-1 自定义右键菜单</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.in{
+			position: absolute;
+			list-style: none;
+			width: 100px;
+			background-color: #ccc;
+			border: 1px solid black;
+			display: none;
+			left: 0;
+			top: 0;
+		}
+		.in>li{
+			float: left;
+			width: 100px;
+			height: 30px;
+		}
+		.in>li:hover{
+			background-color: skyblue;
+		}
+	</style>
+	<script>
+		document.oncontextmenu=function(ev){
+			var oEvent=ev||event;
+			var oDiv=document.querySelector('.in'),
+				oLi=oDiv.querySelectorAll('li');
+				
+				oDiv.style.display="block";
+				oDiv.style.left=oEvent.clientX+'px';
+				oDiv.style.top=oEvent.clientY+'px';
+
+				return false;
+		};
+		document.onclick=function(){
+			var oDiv=document.querySelector('.in');
+
+			oDiv.style.display="none";
+		};
+	</script>
+</head>
+<body>
+	<div class="out">
+		<ul class="in">
+			<li>用新网页打开</li></br>
+			<li>网页另存为</li></br>
+			<li>切换兼容模式</li></br>
+			<li>查看源代码</li></br>
+			<li>属性</li>
+		</ul>
+	</div>
+</body>
+</html>

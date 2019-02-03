@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue demo1</title>
+	<meta charset="utf-8">
+	<script src="../vue.min.js"></script>
+	<style>
+		.fade-enter-active, .fade-leave-active {
+			transition: opacity .5s;
+		}
+		.fade-enter, .fade-leave-to {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<button
+		@click="show = !show"
+		>
+			消失/出现
+		</button>
+		<transition
+		name="fade"
+		>
+			<p
+			v-if="show"
+			>
+				hello,world
+			</p>
+		</transition>
+	</div>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				show: true
+			}
+		})
+	</script>
+</body>
+</html>

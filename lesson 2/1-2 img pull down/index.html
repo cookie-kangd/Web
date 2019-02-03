@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="uft-8">
+<html>
+<head>
+	<title>图片倒下练习</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 520px;
+			height: 280px;
+			margin: 100px auto;
+			border: 1px solid black;
+			perspective: 500px;
+			background-color: blue;
+		}
+		div img{
+			transform-origin:center bottom;
+			transition: transform 1.5s;
+		}
+		div:hover img{
+			transform: rotateX(70deg);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="2.jpg">
+	</div>
+</body>
+</html>

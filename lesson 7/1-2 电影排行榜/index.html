@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+    <title>Js留言板练习</title>
+    <style type="text/css">
+  	    * {
+  		   margin: 0;
+  		   padding: 0;
+  	    }
+  	    .out{
+			width: 300px;
+			height: 450px;
+			margin: 50px auto;
+			border: 1px solid black;
+		}
+		.out>h1{
+			font-size: 30px;
+			line-height: 35px;
+			color: deeppink;
+			padding-left: 20px;
+			border-bottom: 1px dashed #ccc;
+		}
+		ul>li{
+			list-style: none;
+			padding: 10px 5px;
+			border: 1px dashed #ccc;
+		}
+		ul>li:nth-child(-n+3) span{
+			background-color: red;
+		}
+		ul>li>span{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			margin-right: 10px;
+			background-color: #ccc;
+		}
+		.content{
+			overflow: hidden;
+			margin-top: 10px;
+			display: none;
+		}
+		.content>img{
+			width: 100px;
+			height: 120px;
+			float: left;
+		}
+		.content>p{
+			width: 180px;
+			height: 120px;
+			font-size: 12px;
+			float: right;
+		}
+		.in .content{
+			display: block;
+		}
+    </style>
+    <script
+  src="../jquery.js"></script>
+</head>
+<body>	
+	<div class="out">
+		<h1>电影排行榜</h1>
+		<ul id="qq">
+			<li><span>1</span>无名之辈
+				<div class="content">
+					<img src="fengmian.jpg">
+					<p>该片是由饶晓志执导，饶晓志、雷志龙编剧，陈建斌 、任素汐、 潘斌龙、 章宇、王砚辉、九孔等主演的电影。该片围绕一把丢失的老枪，讲述了一对低配版的劫匪，一个落魄的保安，一个身体残疾却性格彪悍的毒舌女...
+					</p>
+				</div>
+			</li>
+			<li><span>2</span>海王
+				<div class="content">
+					<img src="fengmian.jpg">
+					<p>该片是由饶晓志执导，饶晓志、雷志龙编剧，陈建斌 、任素汐、 潘斌龙、 章宇、王砚辉、九孔等主演的电影。该片围绕一把丢失的老枪，讲述了一对低配版的劫匪，一个落魄的保安，一个身体残疾却性格彪悍的毒舌女...
+					</p>
+				</div>
+			</li>
+			<li><span>3</span>毒液
+				<div class="content">
+					<img src="fengmian.jpg">
+					<p>该片是由饶晓志执导，饶晓志、雷志龙编剧，陈建斌 、任素汐、 潘斌龙、 章宇、王砚辉、九孔等主演的电影。该片围绕一把丢失的老枪，讲述了一对低配版的劫匪，一个落魄的保安，一个身体残疾却性格彪悍的毒舌女...
+					</p>
+				</div>
+			</li>
+			<li><span>4</span>无敌破坏王
+				<div class="content">
+					<img src="fengmian.jpg">
+					<p>该片是由饶晓志执导，饶晓志、雷志龙编剧，陈建斌 、任素汐、 潘斌龙、 章宇、王砚辉、九孔等主演的电影。该片围绕一把丢失的老枪，讲述了一对低配版的劫匪，一个落魄的保安，一个身体残疾却性格彪悍的毒舌女...
+					</p>
+				</div>
+			</li>
+			<li><span>5</span>龙猫
+				<div class="content">
+					<img src="fengmian.jpg">
+					<p>该片是由饶晓志执导，饶晓志、雷志龙编剧，陈建斌 、任素汐、 潘斌龙、 章宇、王砚辉、九孔等主演的电影。该片围绕一把丢失的老枪，讲述了一对低配版的劫匪，一个落魄的保安，一个身体残疾却性格彪悍的毒舌女...
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script>
+	    $(function(){
+			$("li").hover(function(){
+				$(this).addClass("in");
+			},function(){
+				$(this).removeClass("in");
+			});
+		});
+    </script>
+</body>
+</html>

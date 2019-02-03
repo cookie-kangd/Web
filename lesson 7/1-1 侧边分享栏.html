@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<title>Js侧边分享栏练习</title>
+  	<style type="text/css">
+  		*{
+  			margin: 0;
+  			padding: 0;
+  		}
+  		#div1{
+  			width: 150px;
+  			height: 200px;
+  			background-color: green;
+  			position: absolute;
+  			left: -150px;
+  			top: 100px;
+  		}
+  		#div1 span{
+  			width: 30px;
+  			height: 60px;
+  			background-color: skyblue;
+  			position: absolute;
+  			right: -30px;
+  			top: 70px;
+  			text-align: center;
+  		}
+  	</style>
+</head>
+<body>
+  	<div id="div1">
+  		<span id="div2">分享到</span>
+  	</div>
+	<script type="text/javascript">
+		var anniu1=document.getElementById('div1'),
+			anniu2=document.getElementById('div2'),
+			timer=null;
+
+		function move(speed,width){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					if(div1.offsetLeft==width){
+						clearInterval(timer);
+					}
+					else{
+						div1.style.left=div1.offsetLeft+speed+'px';
+					}},30);
+				};
+		
+		anniu1.onmouseover=function(){
+			move(10,0);
+		};
+		anniu1.onmouseout=function(){
+			move(-10,-150);
+		};
+  	</script>
+</body>
+</html>

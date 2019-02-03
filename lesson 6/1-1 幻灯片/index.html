@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="uft-8">
+  	<title>1-1 Js页面幻灯片练习</title>
+  	<style type="text/css">
+  		*{
+  			margin: 0;
+  			padding: 0;
+  		}
+  		.zhutu{
+  			width: 520px;
+  			height: 280px;
+  			border: 1px solid black;
+  			box-sizing: border-box;
+  			margin: 100px auto;
+  			position: relative;
+  			overflow: hidden;
+  		}
+  		.zhutu>li{
+			list-style: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+  		}
+  		.zhutu>li:nth-child(1){
+  			z-index: 998;
+  		}
+  		.daohang{
+  			width: 100px;
+  			height: 20px;
+  			position: absolute;
+  			left: 210px;
+  			bottom: -265px;
+  			z-index: 999;
+  		}
+  		.daohang>li{
+  			list-style: none;
+  			width: 10px;
+  			height: 10px;
+  			background-color: black;
+  			border-radius: 100%;
+  			float: left;
+  			margin-right: 10px;
+  			text-align: center;
+  		}
+  		.daohang>li a{
+  			text-decoration:none;
+  			opacity: 0;
+  		}
+  		.zhutu>li #left{
+  			text-align: center;
+  			width: 30px;
+  			height: 30px;
+  			text-decoration: none;
+  			font-size: 16px;
+  			color: white;
+  			background: rgba(0,0,0,0.8);
+  			border-radius: 100%;
+  			position: absolute;
+  			left: -10px;
+  			top: 125px;
+  			z-index: 999;
+  		}
+  		.zhutu>li #right{
+  			text-align: center;
+  			width: 30px;
+  			height: 30px;
+  			text-decoration: none;
+  			font-size: 18px;
+  			color: white;
+  			background: rgba(0,0,0,0.8);
+  			border-radius: 100%;
+  			position: absolute;
+  			right: -530px;
+  			top: 125px;
+  			z-index: 999;
+  		}
+  	</style>
+</head>
+<body>
+	<ul class="zhutu">
+		<li><img src="1.jpg" id="img"></li>
+		<li><img src="2.jpg"></li>
+		<li><img src="3.jpg"></li>
+		<li><img src="4.jpg"></li>
+		<li><img src="5.jpg"></li>
+		<li>
+			<ul class="daohang">
+				<li><a href="javascript:;" id="anniu1">1</a></li>
+				<li><a href="javascript:;" id="anniu2">2</a></li>
+				<li><a href="javascript:;" id="anniu3">3</a></li>
+				<li><a href="javascript:;" id="anniu4">4</a></li>
+				<li><a href="javascript:;" id="anniu5">5</a></li>
+			</ul>
+		</li>
+		<li><a href="javascript:;" id="left">&lt;</a></li>
+		<li><a href="javascript:;" id="right">&gt;</a></li>
+	</ul>
+	<script type="text/javascript">
+		var left=document.getElementById('left'),
+			right=document.getElementById('right'),
+			anniu1=document.getElementById('anniu1'),
+			anniu2=document.getElementById('anniu2'),
+			anniu3=document.getElementById('anniu3'),
+			anniu4=document.getElementById('anniu4'),
+			anniu5=document.getElementById('anniu5'),
+			tupian=document.getElementById('img');
+		var n=1;
+
+		function anniu(){
+			anniu1.onclick=function(){
+				tupian.src="1.jpg";
+			};
+			anniu2.onclick=function(){
+				tupian.src="2.jpg";
+			};
+			anniu3.onclick=function(){
+				tupian.src="3.jpg";
+			};
+			anniu4.onclick=function(){
+				tupian.src="4.jpg";
+			};
+			anniu5.onclick=function(){
+				tupian.src="5.jpg";
+			};
+		};
+		anniu();
+		left.onclick=function(){
+			n--;
+			if (n<1) {
+				n=5;
+			};
+			tupian.src=n+'.jpg';
+		};
+		right.onclick=function(){
+			n++;
+			if (n>5) {
+				n=1;
+			};
+			tupian.src=n+'.jpg';
+		};
+  	</script>
+</body>
+</html>

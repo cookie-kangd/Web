@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="uft-8">
+<html>
+<head>
+	<title>过渡动画练习二</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 520px;
+			height: 280px;
+			border: 1px solid black;
+			margin: 100px auto;
+			overflow: hidden;
+		}
+		ul:hover li{
+			width: 40px;
+		}
+		ul li{
+			list-style: none;
+			width: 104px;
+			height: 280px;
+			float: left;
+			transition: width 0.5s;
+		}
+		ul li:hover{
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="1.jpg"></li>
+		<li><img src="2.jpg"></li>
+		<li><img src="3.jpg"></li>
+		<li><img src="4.jpg"></li>
+		<li><img src="5.jpg"></li>
+	</ul>
+</body>
+</html>

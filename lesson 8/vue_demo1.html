@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue demo1</title>
+	<meta charset="utf-8">
+	<script src="../vue.min.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		h1{
+			margin-top: 30px;
+		}
+		div{
+			margin-top: 30px;
+		}
+		ul{
+			list-style: none;
+			margin-top: 30px;
+		}
+		ul>li{
+			margin-top: 15px;
+		}
+		ul>li>button{
+			margin-left: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>Vue简陋留言板demo</h1>
+		<div>
+			<input type="text" v-model="msg">
+			<button type="button" @click="submit">提交</button>
+		</div>
+		<ul>
+			<app1 
+			v-for="(item,index) in list"
+			:content="item"
+			:index="index"
+			@delete="remove"
+			>
+			</app1>
+		</ul>
+	</div>
+	<script>
+		Vue.component('app1',{
+			props:['content','index'],
+			template:'<li>{{index+1}}.{{content}}<button @click="watchButton">删除</button></li>',
+			methods:{
+				watchButton:function(){
+					this.$emit('delete',this.index);
+				}
+			}
+		})
+
+		new Vue({
+			el:'#app',
+			data:{
+				msg: '',
+				list:[]
+			},
+			methods:{
+				submit:function(){
+					if (this.msg=='') {
+						alert('请输入文字，字符或者数字!');
+					}else{
+						this.list.push(this.msg);
+					}
+					this.msg='';
+				},
+				remove:function(index){
+					this.list.splice(index,1);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

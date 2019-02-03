@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4 记住密码提示框</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.top{
+			width: 110px;
+			height: 20px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.top>.anniu{
+			vertical-align: -2px;
+		}
+		.top>p{
+			display: inline-block;
+			font-size: 12px;
+			font-family: "微软雅黑";
+			text-align: center;
+			line-height: 20px;
+		}
+		.bottom{
+			width: 200px;
+			background-color: #ffefa4;
+			border: 1px solid orange;
+			margin: 5px 46%;
+			display: none;
+		}
+		.bottom>p{
+			font-size: 14px;
+			font-family: "微软雅黑";
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var hezi=document.querySelector('.top');
+			var hezi2=document.querySelector('.bottom');
+			hezi.onmouseenter=function(){
+				hezi2.style.display="block";
+			};
+			hezi.onmouseleave=function(){
+				hezi2.style.display="none";
+			};
+		};
+	</script>
+</head>
+<body>
+	<div class="top">
+		<input type="checkbox" class="anniu">
+		<p>两周内自动登录</p>
+	</div>
+	<div class="bottom">
+		<p>为了您的账号安全，请不要在网吧或公共电脑上启用该功能！</p>
+	</div>
+</body>
+</html>
